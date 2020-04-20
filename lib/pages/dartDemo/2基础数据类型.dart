@@ -1,6 +1,3 @@
-import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
-
 
 void testCode(){
   /*
@@ -50,20 +47,6 @@ void testCode(){
   testBool();
 }
 
-class DartList extends StatelessWidget{
-  @override
-  Widget build(BuildContext context) {
-    testCode();
-    return CupertinoPageScaffold(
-      navigationBar: CupertinoNavigationBar(
-        middle: Text('数据类型'),
-        backgroundColor: Color(0xffffffff),
-      ),
-      child: Text("Dart的数据类型详解  int double String bool List Maps"),
-    );
-  }
-  
-}
 
 ///Numbers数据类型
 void testNumbers(){

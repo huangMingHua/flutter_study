@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 
 
 void testCode(){
@@ -42,19 +40,4 @@ void testCode(){
   str3.indexOf('pattern');
   //字符串查找使用正则  正则表达式应该使用原始字符串 就不用添加转义字符了
   str3.indexOf(new RegExp(r'\d+'));
-}
-
-class DartList extends StatelessWidget{
-  @override
-  Widget build(BuildContext context) {
-    testCode();
-    return CupertinoPageScaffold(
-      navigationBar: CupertinoNavigationBar(
-        middle: Text('字符串的使用'),
-        backgroundColor: Color(0xffffffff),
-      ),
-      child: Text("字符串的使用"),
-    );
-  }
-  
 }

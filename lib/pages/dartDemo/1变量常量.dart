@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 
 
 void testCode(){
@@ -39,19 +37,4 @@ void testCode(){
         
           5、标识符(变量名称)一定要见名思意 ：变量名称建议用名词，方法名称建议用动词  
   */
-}
-
-class DartList extends StatelessWidget{
-  @override
-  Widget build(BuildContext context) {
-    testCode();
-    return CupertinoPageScaffold(
-      navigationBar: CupertinoNavigationBar(
-        middle: Text('变量、常量、命名规则'),
-        backgroundColor: Color(0xffffffff),
-      ),
-      child: Text("变量、常量、命名规则"),
-    );
-  }
-  
 }

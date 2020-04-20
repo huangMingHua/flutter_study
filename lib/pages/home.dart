@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'dartDemo/dartList.dart';
 import 'flutterDemo/flutterList.dart';
 
 class HomePage extends StatelessWidget {
@@ -23,9 +22,7 @@ class HomePage extends StatelessWidget {
                 child: GestureDetector(
                     ///点击事件添加方式
                     onTap: ()=>{
-                      Navigator.of(context).push(CupertinoPageRoute<bool>(
-                        builder: (BuildContext context)=> DartList()
-                      ))
+                      print('object')
                     },
                     child: ClipRRect(
                       ///圆角切割方式

@@ -1,6 +1,3 @@
-import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
-
 
 void testCode(){
   ///数组的几种定义方式
@@ -15,6 +12,7 @@ void testCode(){
 
   //增
   l2.add('value');
+  l3.add('value');
   //删除
   l4.removeLast();
   l4.removeAt(0);
@@ -25,6 +23,8 @@ void testCode(){
   l1.sort((v1,v2)=>v1 < v2 ? -1 : 1);///升序排序
   //查  查找下标  找不到返回-1
   l2.indexOf('1');
+  l2.isEmpty;///是否是空的
+  l2.isNotEmpty;///是否非空
 
   ///遍历
   for(var i = 0 ; i < l4.length;i ++){
@@ -36,19 +36,4 @@ void testCode(){
   });
 
 
-}
-
-class DartList extends StatelessWidget{
-  @override
-  Widget build(BuildContext context) {
-    testCode();
-    return CupertinoPageScaffold(
-      navigationBar: CupertinoNavigationBar(
-        middle: Text('数组的使用'),
-        backgroundColor: Color(0xffffffff),
-      ),
-      child: Text("数组的使用"),
-    );
-  }
-  
 }
