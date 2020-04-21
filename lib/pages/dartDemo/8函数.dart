@@ -1,6 +1,5 @@
 import 'package:flutter/foundation.dart';
 
-///Function也是个对象,他是一个抽象类  但是不是继承自Object
 //定义一个带可选参数的函数,用[]将可选参数包起来
 void optionalFunc(String username,[int age]){
 
@@ -19,7 +18,7 @@ void optionalFunc3(String username,{String sex='男',@required int age}){
 void closureFunc(int addFunc(int l1,int l2)){
 
   ///箭头函数
-   var blockObj = (l000,l2222)=> 10;
+   var _ = (l000,l2222)=> 10;
    //dart箭头函数和es6的不一样  不能用 大括号包起来然后return返回值 只能有一行表达式
   ///报错  不能用return
   // var blockObj1 = (int l000,int l2222)=> {
