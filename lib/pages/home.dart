@@ -36,7 +36,8 @@ class HomePage extends StatelessWidget {
                           style: Theme.of(context).textTheme.title,
                         ),
                       ),
-                    )),
+                    )
+                    ),
               ),
               Container(
                 margin: EdgeInsets.only(top: 10),
