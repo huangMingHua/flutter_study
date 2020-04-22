@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'flutterDemo/flutterList.dart';
-
+import 'uiDemo/UIDemoList.dart';
 class HomePage extends StatelessWidget {
-  void gotoDartDemoList() {}
-  void gotoFlutterDemoList() {}
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
@@ -22,7 +20,9 @@ class HomePage extends StatelessWidget {
                 child: GestureDetector(
                     ///点击事件添加方式
                     onTap: ()=>{
-                      print('object')
+                      Navigator.of(context).push(CupertinoPageRoute<bool>(
+                        builder: (BuildContext context)=> UIDemoList()
+                      ))
                     },
                     child: ClipRRect(
                       ///圆角切割方式
@@ -32,8 +32,8 @@ class HomePage extends StatelessWidget {
                         padding:
                             EdgeInsets.symmetric(vertical: 10, horizontal: 60),
                         child: Text(
-                          "Dart",
-                          style: TextStyle(color: Colors.white),
+                          "UIDemo",
+                          style: Theme.of(context).textTheme.title,
                         ),
                       ),
                     )),
