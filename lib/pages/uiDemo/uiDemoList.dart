@@ -4,7 +4,7 @@ import '1TextDemo.dart';
 import '2ContainerDemo.dart';
 import '3ImageDemo.dart';
 import '4ListViewDemo.dart';
-
+import '5ListViewCustomDemo.dart';
 
 class CellItem{
   String name;
@@ -16,6 +16,7 @@ final dataList  = [
   CellItem('ContainerDemo',(context)=>ContainerDemo()),
   CellItem('ImageDemo',(context)=>ImageDemo()),
   CellItem('ListViewDemo',(context)=>ListViewDemo()),
+  CellItem('ListViewCustomDemo',(context)=>ListViewSeparatedDemo()),
   
 ];
 

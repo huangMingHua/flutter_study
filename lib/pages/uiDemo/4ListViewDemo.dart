@@ -10,7 +10,7 @@ class ListViewDemo extends StatelessWidget {
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
-        middle: Text('Text'),
+        middle: Text('ListViewDemo'),
         backgroundColor: Color(0xffffffff),
       ),
       child: Container(
@@ -32,72 +32,6 @@ class ListViewDemo extends StatelessWidget {
   }
 }
 
-class ListViewDemo1 extends StatefulWidget implements SliverChildDelegate {
-  var dataList = NetDataItem.demoBluilder();
-  @override
-  _ListViewDemo1State createState() => _ListViewDemo1State();
-
-  @override
-  void debugFillDescription(List<String> description) {}
-
-  @override
-  void didFinishLayout(int firstIndex, int lastIndex) {}
-
-  @override
-  double estimateMaxScrollOffset(int firstIndex, int lastIndex,
-      double leadingScrollOffset, double trailingScrollOffset) {
-    return null;
-  }
-
-  @override
-  // TODO: implement estimatedChildCount
-  int get estimatedChildCount => 100;
-
-  @override
-  int findIndexByKey(Key key) {
-    // TODO: implement findIndexByKey
-    return 1;
-  }
-
-  @override
-  bool shouldRebuild(SliverChildDelegate oldDelegate) {
-    // TODO: implement shouldRebuild
-    return false;
-  }
-
-  @override
-  Widget build(BuildContext context, int index) {
-    // TODO: implement build
-    return null;
-  }
-}
-
-class _ListViewDemo1State extends State<ListViewDemo1> {
-  void _aActiveChanged() {
-    setState(() {
-      widget.dataList = NetDataItem.demoBluilder();
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return CupertinoPageScaffold(
-      navigationBar: CupertinoNavigationBar(
-        middle: Text('Text'),
-        backgroundColor: Color(0xffffffff),
-      ),
-      child: GestureDetector(
-        onTap: _aActiveChanged,
-        child: Container(
-          color: Color(0xFFF5F5F5),
-          child: ListView.custom(childrenDelegate: widget),
-        ),
-      ),
-    );
-  }
-}
-
-///第二种custom  使用类似于ios的UITableViewDelegate方式 由父组件 代理生成cell
 
 class ListViewCell extends StatelessWidget {
   final NetDataItem item;
@@ -164,9 +98,10 @@ class NetDataItem {
   String author;
   String dateStr;
   NetDataItem(this.titile, this.content, this.author, this.dateStr);
-  static List<NetDataItem> demoBluilder() {
+  static List<NetDataItem> demoBluilder({int length = 100}) {
     var list = List<NetDataItem>();
-    for (var i = 0; i < 1000; i++) {
+
+    for (var i = 0; i < length; i++) {
       var title = "$i .原油宝穿仓：投资者维权、监管发声 中行发布业务说明";
       var content =
           "$i Content Test ✺◟(∗❛ัᴗ❛ั∗)◞✺ ✺◟(∗❛ัᴗ❛ั∗)◞✺ 😀😖😐😣😡🚖🚌🚋🎊💖💗💛💙🏨🏦🏫 Async Display Test ✺◟(∗❛ัᴗ❛ั∗)◞✺ ✺◟(∗❛ัᴗ❛ั∗)◞✺ 😀😖😐😣😡🚖🚌🚋🎊💖💗💛💙🏨🏦🏫";
