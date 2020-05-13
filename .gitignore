@@ -46,6 +46,7 @@ gradle.properties
 
 # iOS/XCode related
 xcuserdata
+xcshareddata
 Pods
 Podfile.lock
 **/ios/**/*.mode1v3
