@@ -10,11 +10,11 @@ class ListViewCustomDemo extends StatefulWidget {
 ///第二种custom  使用类似于ios的UITableViewDelegate方式  生成一个代理对象
 ///  由该对象决定渲染个数和渲染的cell
 class _ListViewCustomDemoState extends State<ListViewCustomDemo> {
-  var dataList = NetDataItem.demoBluilder(length: 2);
+  var dataList = NetDataItem.demoBluilder();
   void _aActiveChanged() {
     print('_aActiveChanged');
     setState(() {
-      var arr = NetDataItem.demoBluilder(length: 2);
+      var arr = NetDataItem.demoBluilder();
       for (var i = 0; i < arr.length; i++) {
         this.dataList.add(arr[i]);
       }
@@ -45,7 +45,7 @@ class _ListViewCustomDemoState extends State<ListViewCustomDemo> {
 
 ///第三组 separated创建类似于
 class ListViewSeparatedDemo extends StatelessWidget {
-  final dataList = NetDataItem.demoBluilder(length: 20);
+  final dataList = NetDataItem.demoBluilder();
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(

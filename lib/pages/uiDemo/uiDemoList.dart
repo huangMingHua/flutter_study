@@ -4,7 +4,7 @@ import '1TextDemo.dart';
 import '2ContainerDemo.dart';
 import '3ImageDemo.dart';
 import '4ListViewDemo.dart';
-import '5ListViewCustomDemo.dart';
+import '6GridViewDemo.dart';
 
 class CellItem{
   String name;
@@ -16,8 +16,7 @@ final dataList  = [
   CellItem('ContainerDemo',(context)=>ContainerDemo()),
   CellItem('ImageDemo',(context)=>ImageDemo()),
   CellItem('ListViewDemo',(context)=>ListViewDemo()),
-  CellItem('ListViewCustomDemo',(context)=>ListViewSeparatedDemo()),
-  
+  CellItem('GridViewDemo', (context)=>GridViewDemo())
 ];
 
 class UIDemoList extends StatelessWidget{
@@ -54,4 +53,28 @@ class UIDemoList extends StatelessWidget{
     );
   }
   
+}
+
+
+class _MovieDetailState extends State<MovieDetail> {
+  // build 函数是必须的，用来渲染当前有状态控件对应的 UI 结构
+  @override
+  Widget build(BuildContext context) {
+    // 注意：在这个 _MovieDetailState 状态类中，可以使用 widget 对象访问到 StatefulWidget 控件中的数据并直接使用
+    // 例如：widget.id
+    return Text('MovieDetail --' + widget.id);
+  }
+}
+
+class MovieDetail extends StatefulWidget {
+  // 构造函数，初始化当前组件必须的 id 属性
+  MovieDetail({Key key, @required this.id}) : super(key: key);
+ 
+  // 电影的Id值
+  final String id;
+ 
+  // StatefulWidget 控件必须实现 createState 函数
+  // 在 createState 函数中，必须返回一个继承自 State<T> 状态类的对象
+  // 这里的 _MovieDetailState 就继承自 State<T>
+  _MovieDetailState createState() => new _MovieDetailState();
 }
