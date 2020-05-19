@@ -5,7 +5,7 @@ import '2ContainerDemo.dart';
 import '3ImageDemo.dart';
 import '4ListViewDemo.dart';
 import '6GridViewDemo.dart';
-
+import '7FlexLayoutDemo.dart';
 class CellItem{
   String name;
   WidgetBuilder builder;
@@ -16,7 +16,10 @@ final dataList  = [
   CellItem('ContainerDemo',(context)=>ContainerDemo()),
   CellItem('ImageDemo',(context)=>ImageDemo()),
   CellItem('ListViewDemo',(context)=>ListViewDemo()),
-  CellItem('GridViewDemo', (context)=>GridViewDemo())
+  CellItem('GridViewDemo', (context)=>GridViewDemo()),
+  CellItem('FlexLayoutDemo', (context)=>FlexLayoutDemo()),
+
+  
 ];
 
 class UIDemoList extends StatelessWidget{
