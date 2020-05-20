@@ -6,18 +6,20 @@ import '3ImageDemo.dart';
 import '4ListViewDemo.dart';
 import '6GridViewDemo.dart';
 import '7FlexLayoutDemo.dart';
+import '8StackDemo.dart';
 class CellItem{
   String name;
   WidgetBuilder builder;
   CellItem(this.name,this.builder);
 }
 final dataList  = [
-  CellItem('TextDemo',(context)=>TextDemo()),
-  CellItem('ContainerDemo',(context)=>ContainerDemo()),
-  CellItem('ImageDemo',(context)=>ImageDemo()),
-  CellItem('ListViewDemo',(context)=>ListViewDemo()),
-  CellItem('GridViewDemo', (context)=>GridViewDemo()),
-  CellItem('FlexLayoutDemo', (context)=>FlexLayoutDemo()),
+  CellItem('Text',(context)=>TextDemo()),
+  CellItem('Container',(context)=>ContainerDemo()),
+  CellItem('ImageView',(context)=>ImageDemo()),
+  CellItem('ListView',(context)=>ListViewDemo()),
+  CellItem('GridView', (context)=>GridViewDemo()),
+  CellItem('Padding Row Column Expanded', (context)=>FlexLayoutDemo()),
+  CellItem('stack层叠 Align Stack Positioned', (context)=>StackDemo()),
 
   
 ];
@@ -35,8 +37,8 @@ class UIDemoList extends StatelessWidget{
             itemCount: dataList.length,
             itemBuilder: (BuildContext context, int index) {
             return Container(
-              margin: EdgeInsets.all(10),
-              padding: EdgeInsets.all(10),
+              margin: EdgeInsets.all(5),
+              padding: EdgeInsets.all(5),
               color:Colors.grey,
               child: GestureDetector(
                 onTap: (){
