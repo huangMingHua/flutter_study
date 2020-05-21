@@ -6,7 +6,7 @@ class FlexLayoutDemo extends StatelessWidget {
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
-        middle: Text('Text'),
+        middle: Text('FlexLayoutDemo'),
         backgroundColor: Color(0xffffffff),
       ),
       child: Column(

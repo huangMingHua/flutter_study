@@ -6,7 +6,7 @@ class GridViewDemo extends StatelessWidget {
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
-        middle: Text('Text'),
+        middle: Text('GridViewDemo'),
         backgroundColor: Color(0xffffffff),
       ),
       child: GridView.builder(

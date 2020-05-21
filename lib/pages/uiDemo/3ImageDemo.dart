@@ -7,7 +7,7 @@ class ImageDemo extends StatelessWidget {
     ;
     return CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
-        middle: Text('ContainerDemo'),
+        middle: Text('ImageDemo'),
         backgroundColor: Color(0xffffffff),
       ),
       child: Center(
